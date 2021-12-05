@@ -2,6 +2,10 @@
     <string name="app_name">Money Manager</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="amount">Amount</string>
+    <string name="submit">Submit</string>
+    <string name="money_manager_pro">Money Manager Pro</string>
+    <string name="overall_balance">Overall Balance</string>
 
     <string-array name="s">
 

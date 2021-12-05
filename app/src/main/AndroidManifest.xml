@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyManager">
-        <activity android:name="com.pns.moneymanager.activity.AddIncomeAndExpenseActivity"></activity>
-        <activity android:name="com.pns.moneymanager.activity.HomeActivity">
+        <activity
+            android:name="com.pns.moneymanager.activity.AddIncomeAndExpenseActivity"
+            android:exported="true" />
+        <activity android:name="com.pns.moneymanager.activity.HomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

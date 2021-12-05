@@ -5,7 +5,6 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.pns.moneymanager.R
 import com.pns.moneymanager.models.MoneyManagerDao
@@ -46,7 +45,7 @@ class BalanceFragment : Fragment(R.layout.fragment_balance) {
         var incomeCount = 0
         var expenseCount = 0
 
-        viewModel.get().observe(viewLifecycleOwner, Observer {
+        viewModel.get().observe(viewLifecycleOwner, {
 
             for (i in it) {
 

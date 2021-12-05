@@ -1,20 +1,20 @@
 package com.pns.moneymanager.fragment
 
-import android.app.Activity
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.pns.moneymanager.*
 import com.pns.moneymanager.activity.AddIncomeAndExpenseActivity
 import com.pns.moneymanager.adapter.Adapter
-import com.pns.moneymanager.models.MoneyManagerDao
-import com.pns.moneymanager.models.MoneyManagerDatabase
 import com.pns.moneymanager.interfaces.OnItemClickListener
 import com.pns.moneymanager.models.Model
+import com.pns.moneymanager.models.MoneyManagerDao
+import com.pns.moneymanager.models.MoneyManagerDatabase
 import com.pns.moneymanager.repository.MoneyManagerRepo
 import com.pns.moneymanager.viewmodels.MoneyManagerViewModel
 import com.pns.moneymanager.viewmodels.MoneyManagerViewModelFactory
@@ -45,12 +45,13 @@ class ExpenseFragment : Fragment(R.layout.fragment_expense), OnItemClickListener
         fetchData()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun fetchData() {
 
-        val adapter = Adapter(expenseList, context as Activity, this)
+        val adapter = Adapter(expenseList, this)
         recyclerView.adapter = adapter
 
-        viewModel.get().observe(viewLifecycleOwner, Observer {
+        viewModel.get().observe(viewLifecycleOwner, {
 
             expenseList.clear()
 
@@ -67,6 +68,7 @@ class ExpenseFragment : Fragment(R.layout.fragment_expense), OnItemClickListener
     override fun onDeleteClick(model: Model) {
 
         viewModel.delete(model)
+        Toast.makeText(context, "Deleted", Toast.LENGTH_LONG).show()
     }
 
     override fun onEditClick(model: Model) {

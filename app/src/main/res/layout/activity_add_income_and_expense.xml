@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#6666cc"
+        android:background="#062CEA"
         app:contentInsetStart="0dp">
 
         <RelativeLayout
@@ -21,6 +21,7 @@
                 android:id="@+id/back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_back" />
 
             <ImageView
@@ -29,16 +30,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/back"
+                android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_money" />
 
             <TextView
+                android:id="@+id/header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@+id/money"
+                android:fontFamily="monospace"
                 android:text="Add/Edit"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                tools:ignore="HardcodedText" />
 
         </RelativeLayout>
 
@@ -61,32 +66,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Amount"
-            android:inputType="number" />
+            android:hint="@string/amount"
+            android:inputType="number"
+            tools:ignore="Autofill" />
 
         <EditText
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Description" />
+            android:hint="Description"
+            android:inputType="text"
+            tools:ignore="Autofill,HardcodedText" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="#66a3ff"
+            android:backgroundTint="#9611CF"
             android:textAlignment="textStart"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#b3cccc"
-            android:text="Submit"
-            android:textColor="@color/black" />
+            android:backgroundTint="#F813F4"
+            android:text="@string/submit"
+            android:textColor="@color/white" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>

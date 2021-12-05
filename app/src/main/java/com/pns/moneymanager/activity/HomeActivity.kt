@@ -20,7 +20,7 @@ class HomeActivity : AppCompatActivity() {
 
         tabLayout!!.tabGravity = TabLayout.GRAVITY_FILL
 
-        val adapter = MyAdapter(this, supportFragmentManager, tabLayout!!.tabCount)
+        val adapter = MyAdapter(supportFragmentManager, tabLayout!!.tabCount)
         viewPager!!.adapter = adapter
 
         viewPager!!.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))

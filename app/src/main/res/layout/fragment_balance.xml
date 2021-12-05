@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
-        android:text="Overall Balance"
+        android:text="@string/overall_balance"
         android:textColor="@color/black"
         android:textSize="14sp" />
 
@@ -28,7 +28,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
             android:text="Income : "
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/expense"
@@ -36,7 +37,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
             android:text="Expense : "
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/total"
@@ -44,7 +46,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="monospace"
             android:text="Total : "
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>

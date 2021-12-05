@@ -49,8 +49,12 @@ class AddIncomeAndExpenseActivity : AppCompatActivity() {
             description.text = data.description.toEditable()
             submit.text = "Update"
 
-            if (data.type == "Expense")
+            if (data.type == "Expense") {
+                header.text = "Update expense"
                 spinner.setSelection(1)
+            } else {
+                header.text = "Update income"
+            }
         }
 
         val sdf = SimpleDateFormat("yyyy/MM/dd")
@@ -88,6 +92,8 @@ class AddIncomeAndExpenseActivity : AppCompatActivity() {
 
     private fun updateData(model: Model) {
 
+        Toast.makeText(this, "Updated", Toast.LENGTH_LONG).show()
+
         CoroutineScope(Dispatchers.IO).launch {
 
             viewModel.update(model)
@@ -97,6 +103,8 @@ class AddIncomeAndExpenseActivity : AppCompatActivity() {
     }
 
     private fun saveData(date: String, type: String, amount: String, description: String) {
+
+        Toast.makeText(this, "Saved", Toast.LENGTH_LONG).show()
 
         CoroutineScope(Dispatchers.IO).launch {
 
