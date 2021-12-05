@@ -1,4 +1,4 @@
-![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/snapchat-f2264.appspot.com/o/Big_Number%5B1%5D.png?alt=media&token=de6c1336-7489-4065-b925-2c6fc5761a98)
+![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/snapchat-f2264.appspot.com/o/Blue%20and%20Pink%20Simple%20Empowerment%20Keynote%20Presentation%20(2).png?alt=media&token=e1f7a33d-1e28-41b3-b31f-9daa7dc1828b)
 
 ###  
 App Name                   | Describe                  | Tech Stack             | Google Play 
@@ -24,4 +24,4 @@ Money manager | Money manager is an Android app that helps users to track their 
 
 ## Here are the some screenshots of the application
 
-![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/snapchat-f2264.appspot.com/o/Untitled%20design%20(14).png?alt=media&token=8b0ee9e5-c158-45f1-9c7a-1a5743d86be0)
+![GitHub Cards Preview](https://firebasestorage.googleapis.com/v0/b/snapchat-f2264.appspot.com/o/Untitled%20design%20(16).png?alt=media&token=26cd2f1d-d5d8-4514-b98e-423c45b4797f)
