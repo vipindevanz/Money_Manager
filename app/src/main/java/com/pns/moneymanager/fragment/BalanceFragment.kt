@@ -59,10 +59,21 @@ class BalanceFragment : Fragment(R.layout.fragment_balance) {
                 }
             }
 
+            val totalAmt = incomeCount - expenseCount
             income.text = "Income : $incomeCount"
             expense.text = "Expense : $expenseCount"
-            total.text = "Total : ${incomeCount - expenseCount}"
+            total.text = "Total : $totalAmt"
 
+            if (totalAmt == 0){
+                profit.visibility = View.GONE
+                loss.visibility = View.GONE
+            } else if (totalAmt > 0){
+                profit.visibility = View.VISIBLE
+                loss.visibility = View.GONE
+            } else{
+                profit.visibility = View.GONE
+                loss.visibility = View.VISIBLE
+            }
         })
     }
 }
